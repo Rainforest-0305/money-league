@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>머니리그</title>
+<script>
+/* 보험용 폴백. 앱은 HashRouter 라 정상 경로에서는 이 파일이 뜨지 않는다.
+   호스트가 알 수 없는 경로를 404 로 넘길 때만 index.html 로 되돌린다. */
+(function () {
+  var base = location.pathname.replace(/\/[^\/]*$/, '/');
+  location.replace(base + 'index.html' + (location.hash || ''));
+})();
+</script>
+</head>
+<body></body>
+</html>

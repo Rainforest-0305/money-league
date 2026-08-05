@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+    <meta name="theme-color" content="#6B4EFF" />
+    <meta name="description" content="머니리그 — 가상의 1만 달러로 210명의 트레이더와 겨루는 모의투자 게임" />
+    <title>머니리그</title>
+    <!--
+      [P1 2026-08-05] Pretendard self-host.
+      기존: cdn.jsdelivr.net preconnect + dynamic-subset CSS (외부 요청 2건 이상).
+      정적 단독 빌드는 **외부 네트워크 요청 0건**이 요건이라 폰트를 동봉한다.
+      public/fonts/ 는 가공 없이 복사되며, 경로는 base(./) 를 따라 상대경로로 출력된다.
+    -->
+    <link rel="preload" href="./fonts/pretendard-0.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./fonts/pretendard.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='8' fill='%236B4EFF'/%3E%3Cpath d='M6 17.5 10.5 12l3.5 3.4L20 8' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-CYW8QdXc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DNgmipIV.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
