@@ -149,7 +149,7 @@
       "sizes": "1920x1080",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Money League - Leverage and options"
+      "label": "Money League - Leverage and options, with the risk shown up front"
     },
     {
       "src": "screenshots/mobile-1-title.png",
@@ -185,6 +185,13 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Money League - Browse 100 companies"
+    },
+    {
+      "src": "screenshots/mobile-6-leverage.png",
+      "sizes": "636x1048",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Money League - Leverage and options, with the risk shown up front"
     }
   ]
 }
