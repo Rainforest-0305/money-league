@@ -19,7 +19,7 @@
  *   빌드마다 이름이 바뀌어 하드코딩하면 install 이 404 로 실패한다.
  *   그것들은 첫 방문 때 fetch 핸들러가 자연히 캐싱한다.
  */
-const CACHE = 'money-league-v1-20260818';
+const CACHE = 'money-league-v2-20260818';
 const PRECACHE = [
   './',
   './index.html',
