@@ -1,0 +1,190 @@
+{
+  "id": "money-league",
+  "name": "Money League",
+  "short_name": "MoneyLeague",
+  "description": "Start with a virtual $10,000 and climb a 210-trader league. Trade 100 stocks, take leverage and options positions, track your portfolio and chase the top of the daily ranking. Fully offline, no real money involved.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "orientation": "any",
+  "background_color": "#f2f4f6",
+  "theme_color": "#6B4EFF",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": [
+    "games",
+    "entertainment",
+    "finance"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop-1-title.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Money League - Start with a virtual $10,000"
+    },
+    {
+      "src": "screenshots/desktop-2-portfolio.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Money League - Track your portfolio live"
+    },
+    {
+      "src": "screenshots/desktop-3-stocks.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Money League - Browse 100 companies"
+    },
+    {
+      "src": "screenshots/desktop-4-detail.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Money League - Charts, holdings and orders"
+    },
+    {
+      "src": "screenshots/desktop-5-ranks.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Money League - Climb the 210-trader league"
+    },
+    {
+      "src": "screenshots/desktop-6-leverage.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Money League - Leverage and options"
+    },
+    {
+      "src": "screenshots/mobile-1-title.png",
+      "sizes": "636x1048",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Money League - Start with a virtual $10,000"
+    },
+    {
+      "src": "screenshots/mobile-2-portfolio.png",
+      "sizes": "636x1048",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Money League - Track your portfolio live"
+    },
+    {
+      "src": "screenshots/mobile-3-detail.png",
+      "sizes": "636x1048",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Money League - Charts, holdings and orders"
+    },
+    {
+      "src": "screenshots/mobile-4-ranks.png",
+      "sizes": "636x1048",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Money League - Climb the 210-trader league"
+    },
+    {
+      "src": "screenshots/mobile-5-stocks.png",
+      "sizes": "636x1048",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Money League - Browse 100 companies"
+    }
+  ]
+}
