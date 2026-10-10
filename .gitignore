@@ -1,0 +1,65 @@
+# ── 공개 레포 .gitignore (2026-09-25 갱신 — 2026-09-04 조사보고 §3 초안 기반) ──
+
+# ── 의존성·빌드 산출물 ─────────────────────────────
+node_modules/
+dist/
+dist_*/
+distperf_*/
+.granite/
+*.tsbuildinfo
+
+# ── 토스 제출 번들: 운영 광고지면 ID 가 인라인돼 있다 ──
+*.ait
+*.aab
+*.apk
+
+# ── 작업 흔적·증거·백업 (레포에 들어갈 이유 없음) ──
+/_*
+_*_evidence_*/
+_*_backup_*/
+_backup_*/
+_verify_*/
+_live_*extracted/
+_harness_*/
+_testonly_*/
+.promo_testonly_backup/
+.tmp_cw/
+_pristine_*
+*.bak
+*.bak_*
+*.bak.*
+*.promobak
+*.keep
+*.diff
+*_TESTONLY.*
+*TESTONLY*
+src_md5_baseline_*.txt
+scripts/_*
+tools/_*
+scripts/_bak/
+scripts/bench/
+scripts/.sec_cache/
+/qa/
+/store/
+/logs/
+qa_evidence/
+__pycache__/
+*.pyc
+
+# ── 로그·로컬 도구 ────────────────────────────────
+*.log
+.impeccable/
+_사이드로드_테스트도구/
+.DS_Store
+nul
+
+# ── 자격증명 (원칙) ──────────────────────────────
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.p8
+*.pem
+serviceAccount*.json

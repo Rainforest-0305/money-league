@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
     <meta name="theme-color" content="#6B4EFF" />
-    <meta name="description" content="머니리그 — 가상의 1만 달러로 210명의 트레이더와 겨루는 모의투자 게임" />
-    <title>머니리그</title>
+    <meta name="description" content="머니 리그 — 가상의 1만 달러로 210명의 트레이더와 겨루는 모의투자 게임" />
+    <title>머니 리그</title>
     <!--
       [P1 2026-08-05] Pretendard self-host.
       기존: cdn.jsdelivr.net preconnect + dynamic-subset CSS (외부 요청 2건 이상).
       정적 단독 빌드는 **외부 네트워크 요청 0건**이 요건이라 폰트를 동봉한다.
       public/fonts/ 는 가공 없이 복사되며, 경로는 base(./) 를 따라 상대경로로 출력된다.
     -->
-    <link rel="preload" href="./fonts/pretendard-0.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="./fonts/pretendard.css" />
+    <link rel="preload" href="/fonts/pretendard-0.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/pretendard.css" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect width='26' height='26' rx='8' fill='%236B4EFF'/%3E%3Cpath d='M6 17.5 10.5 12l3.5 3.4L20 8' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
     <!--
       [MS Store 2026-08-18] 웹앱 매니페스트 배선.
@@ -22,13 +22,33 @@
       **발견하지 못한다** — 라이브 5종(sumo-bounce 등)이 전부 이 링크를 갖고 있다.
       public/ 안의 파일은 base('./') 를 따라 상대경로로 출력된다.
     -->
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <script type="module" crossorigin src="./assets/index-B6zaVSdY.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D_wmbLN2.css">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
   </head>
-  <body>
+  <!--
+    프로모션 리워드 설정 (2026-08-29 훅 3종. 옛 「거래 성공」 코드는 콘솔에서 종료돼 제거).
+      streak3  3일 연속 접속하기   10원
+      hold10   10종목 담아보기     10원
+      cash100k 현금 10만달러 모으기 100원   (★08-29 「100위 안에 들기」 콘솔 반려 → 교체. 반려 코드는 «제거»)
+      equity1m 100만 달러 모으기    200원   (★09-01 신설. 조건 = «총자산»(현금+평가액) 1,000,000 USD 이상)
+      play1h   1시간 플레이하기     200원   (★09-01 신설. 조건 = «포그라운드 실시간» 누적 3,600,000 ms)
+    금액은 콘솔 카드 금액과 «정확히» 같아야 한다(게임 앱은 고정 금액만).
+
+    코드를 DOM 에 두는 이유: 상수로 두면 번들러가 지운다. src/toss/promotion.ts 가
+    `const CODE = ''` 였다면 `if (!CODE) return;` 이 상수 접기로 판정돼 지급 호출
+    블록이 통째로 삭제된다. 광고에서 실제로 그런 사고가 있었다. DOM 속성은 못 접는다.
+    테스트 빌드(TESTONLY)는 scripts/promo_testonly_patch.mjs 가 TEST_ 접두를 붙인다.
+    정본에는 TEST_ 가 «한 글자도» 있으면 안 된다(scripts/ait_scan_promo.py 가 검사).
+  -->
+  <body
+    data-promo-streak3-code="__PROMOTION_CODE__" data-promo-streak3-amount="10"
+    data-promo-hold10-code="__PROMOTION_CODE__" data-promo-hold10-amount="10"
+    data-promo-cash100k-code="__PROMOTION_CODE__" data-promo-cash100k-amount="100"
+    data-promo-equity1m-code="__PROMOTION_CODE__" data-promo-equity1m-amount="200"
+    data-promo-play1h-code="__PROMOTION_CODE__" data-promo-play1h-amount="200"
+  >
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
     <!--
       오프라인 서비스워커. 라이브 5종과 «같은 형태»로 맞춘다(검증된 패턴 재사용).
       - 토스 미니앱 WebView 안에서는 등록하지 않는다: .ait 번들은 자체 로딩

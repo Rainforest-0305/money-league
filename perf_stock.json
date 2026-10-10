@@ -1,0 +1,78 @@
+{
+ "before": [
+  {
+   "frames": 714,
+   "secs": 12.010400000023841,
+   "long32": 4,
+   "long100": 0,
+   "nodes": 121,
+   "fps": 59.45,
+   "mode": "line"
+  },
+  {
+   "frames": 711,
+   "secs": 12.001100000023841,
+   "long32": 5,
+   "long100": 0,
+   "nodes": 121,
+   "fps": 59.24,
+   "mode": "line"
+  },
+  {
+   "frames": 716,
+   "secs": 12.01579999997616,
+   "long32": 3,
+   "long100": 0,
+   "nodes": 151,
+   "fps": 59.59,
+   "mode": "candle"
+  },
+  {
+   "frames": 714,
+   "secs": 12.01580000009537,
+   "long32": 4,
+   "long100": 0,
+   "nodes": 151,
+   "fps": 59.42,
+   "mode": "candle"
+  }
+ ],
+ "after": [
+  {
+   "frames": 711,
+   "secs": 12.012300000023842,
+   "long32": 7,
+   "long100": 0,
+   "nodes": 117,
+   "fps": 59.19,
+   "mode": "line"
+  },
+  {
+   "frames": 713,
+   "secs": 12.001099999952315,
+   "long32": 5,
+   "long100": 0,
+   "nodes": 117,
+   "fps": 59.41,
+   "mode": "line"
+  },
+  {
+   "frames": 714,
+   "secs": 12.002000000023843,
+   "long32": 3,
+   "long100": 0,
+   "nodes": 117,
+   "fps": 59.49,
+   "mode": "candle"
+  },
+  {
+   "frames": 713,
+   "secs": 12.012599999976159,
+   "long32": 6,
+   "long100": 0,
+   "nodes": 117,
+   "fps": 59.35,
+   "mode": "candle"
+  }
+ ]
+}
